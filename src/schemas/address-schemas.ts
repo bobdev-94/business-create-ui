@@ -21,6 +21,7 @@ export const OfficeAddressSchema: AddressSchemaIF = {
     isCanada: (val: string) => Boolean(val === 'CA')
   },
   addressRegion: {
+    required,
     maxLength: maxLength(2),
     // FUTURE: create new validation function isRegion('BC')
     isBC: (val: string) => Boolean(val === 'BC')
@@ -52,6 +53,7 @@ export const CoopOfficeAddressSchema: AddressSchemaIF = {
     isCanada: (val: string) => Boolean(val === 'CA')
   },
   addressRegion: {
+    required,
     maxLength: maxLength(2)
   },
   postalCode: {
@@ -79,6 +81,7 @@ export const PersonAddressSchema: AddressSchemaIF = {
     required
   },
   addressRegion: {
+    required,
     maxLength: maxLength(2)
   },
   postalCode: {
